@@ -1,0 +1,9 @@
+Our use mutate has one more parameter onMutate there we set something what happens before mutation 
+
+With these we should copy everything from onSuccess and past it into onMutate
+
+In onSuccess we have to replace newTodo with saved ToDo from backend by map method
+
+And add onError: which has two parameters error,newDTO, and previousDTO
+
+We have to store previous DTO using our client.getQueryData and set interface with context

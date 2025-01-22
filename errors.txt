@@ -1,0 +1,6 @@
+To handle error we have to add generic parameters 
+useMutation<DTO, Error,DTO>(...)
+
+After that we just use alert
+
+Also this useMutation has property is loading and we can add for our button label during loading
