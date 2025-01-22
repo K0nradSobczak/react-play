@@ -1,14 +1,9 @@
-import ProviderWrapper from './state-management/providers/ProviderWrapper';
-import HomePage from './state-management/components/HomePage';
-import NavBar from './state-management/components/NavBar';
+import Counter from './state-management-zustand/counter/Counter';
 
 
 function App() {
   return (
-          <ProviderWrapper>
-            <NavBar/>
-            <HomePage/>
-          </ProviderWrapper>
+      <Counter/>
 
 
   );
