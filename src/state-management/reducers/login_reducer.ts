@@ -5,10 +5,10 @@ interface LoginAction {
 interface LogoutAction {
   type: loginStatus.logout;
 }
-type Action = LogoutAction | LoginAction
+export type UserAction = LogoutAction | LoginAction
 
 
-export const loginReducer = (state: string, action: Action) => {
+export const loginReducer = (state: string, action: UserAction) => {
   switch (action.type) {
     case loginStatus.login:
       return action.email;

@@ -1,17 +1,16 @@
-import InfinityPage from './react-query/InfinitePage';
-import TodoForm from './react-query/TodoForm';
-import TodoList from './react-query/TodoList';
-import LoginPage from './routing/LoginPage';
-import Counter from './state-management/Counter';
-import LoginStatus from './state-management/LoginStatus';
-import TaskList from './state-management/TaskList';
+import ProviderWrapper from './state-management/providers/ProviderWrapper';
+import HomePage from './state-management/components/HomePage';
+import NavBar from './state-management/components/NavBar';
 
 
 function App() {
   return (
-    <>
-    <LoginStatus/>
-    </>
+          <ProviderWrapper>
+            <NavBar/>
+            <HomePage/>
+          </ProviderWrapper>
+
+
   );
 }
 

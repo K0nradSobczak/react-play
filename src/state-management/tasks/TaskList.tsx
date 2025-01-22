@@ -1,9 +1,8 @@
-import { useReducer } from "react";
-import { acctionType, reduceTask } from "./reducers/task_reducer";
+import { useTask } from "../hooks/useTask";
+import { acctionType } from "./task_reducer";
 
 const TaskList = () => {
-  const [value, dispatch] = useReducer(reduceTask, []);
-
+  const { value, dispatch } = useTask();
   return (
     <>
       <button
@@ -26,7 +25,9 @@ const TaskList = () => {
             <span className="flex-grow-1">{task.title}</span>
             <button
               className="btn btn-outline-danger"
-              onClick={() => dispatch({type: acctionType.delete, entityId: task.id})}
+              onClick={() =>
+                dispatch({ type: acctionType.delete, entityId: task.id })
+              }
             >
               Delete
             </button>
