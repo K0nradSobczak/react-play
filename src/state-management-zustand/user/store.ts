@@ -8,6 +8,6 @@ interface UserStorage {
 
 export const storeUser = create<UserStorage>((set) => ({
   email: "",
-  login: (email: string) => set((store) => ({ email: email })),
-  logout: () => set((store) => ({ email: "" })),
+  login: (email: string) => set(() => ({ email: email })),
+  logout: () => set(() => ({ email: "" })),
 }));

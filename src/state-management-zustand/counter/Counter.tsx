@@ -2,6 +2,7 @@ import storeCount from './store';
 
 const Counter = () => {
   const { increment, reset, counter } = storeCount();
+  // we can rerender component only whe n some value change by storeCount(s => s.counter);
   return (
     <div>
       Counter ({counter})
