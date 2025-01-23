@@ -1,15 +1,16 @@
 import { useAuth } from "../hooks/useAuth";
 import { loginStatus } from "../reducers/login_reducer";
+import { storeUser } from "./store";
 
 const LoginStatus = () => {
-  const { value, dispatch } = useAuth();
+  const {login, logout, email} = storeUser();
 
-  if (value)
+  if (email)
     return (
       <>
         <div>
-          <span className="mx-2">{value}</span>
-          <a onClick={() => dispatch({ type: loginStatus.logout })} href="#">
+          <span className="mx-2">{email}</span>
+          <a onClick={() => logout()} href="#">
             Logout
           </a>
         </div>
@@ -18,7 +19,7 @@ const LoginStatus = () => {
   return (
     <div>
       <a
-        onClick={() => dispatch({ type: loginStatus.login, email: "mosh.123" })}
+        onClick={() => login('mosh.123')}
         href="#"
       >
         Login
